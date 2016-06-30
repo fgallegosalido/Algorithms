@@ -3,17 +3,6 @@
 #include <cstdlib>
 #include <cmath>
 
-bool IsPrime2 (unsigned long &n){
-   bool is_prime = n != 2;
-   unsigned long top = (unsigned long) sqrt(n)+1;
-
-   for (unsigned long i=3; i<top && is_prime; i+=2){
-      is_prime = n%i != 0;
-   }
-
-   return is_prime;
-}
-
 // Function that given a natural number bigger than 1, check if it's prime.
 bool IsPrime (unsigned long &n){
    // Get rid of base cases
