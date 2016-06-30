@@ -38,7 +38,7 @@ int main (int argc, char* argv[]){
    std::chrono::duration<double> transcurrido;
 
    tantes = std::chrono::high_resolution_clock::now();
-   is_prime = IsPrime2(n);
+   is_prime = IsPrime(n);
    tdespues = std::chrono::high_resolution_clock::now();
 
    transcurrido = std::chrono::duration_cast<std::chrono::duration<double>>(tdespues - tantes);
