@@ -60,4 +60,7 @@ int main(int argc, char* argv[]){
    transcurrido = std::chrono::duration_cast<std::chrono::duration<double>>(tdespues - tantes);
 
    std::cout << "Size: " << n << ", Min Size: " << k << ", Time: " << transcurrido.count() << std::endl;
+
+   delete[] array;
+   delete[] k_min;
 }
