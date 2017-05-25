@@ -4,20 +4,6 @@
 #include <list>
 #include <chrono>
 
-// Function that checks if the number passed is prime
-bool IsPrime (const unsigned long &n){
-   if (n==2 || n==3) return true;
-
-   bool is_prime = n%2 != 0 && n%3 != 0;
-   unsigned long top = (unsigned long) sqrt(n)+1;
-
-   for (unsigned long i=3; i<top && is_prime; i+=6){
-      is_prime = (n%(i+2) != 0) && (n%(i+4) != 0);
-   }
-
-   return is_prime;
-}
-
 // Function that returns the primes number up to a top using the
 // Eratosthenes sieve.
 std::list<unsigned long> EratosthenesSieve(const unsigned long &range){
@@ -39,12 +25,9 @@ std::list<unsigned long> EratosthenesSieve(const unsigned long &range){
 
    // For every odd number up to the top:
    for (unsigned long i=2; i<top; i+=2){
-      // If the number is prime:
-      if (IsPrime(i+1)){
-         // Mark all multiples of the number as not primes
-         for (unsigned long j=i*3+2; j<range; j += (i+1)*2){
-            mask[j] = false;
-         }
+      // Mark all multiples of the number as not primes
+      for (unsigned long j=i*3+2; j<range; j += (i+1)*2){
+         mask[j] = false;
       }
    }
 
