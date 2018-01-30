@@ -6,8 +6,6 @@
 ##  Language: Python 3                                                                  ##
 ##########################################################################################
 
-from math import pow
-
 def sum_digits(n):
     s = 0
     while n:
