@@ -23,7 +23,6 @@ std::deque<unsigned long> eratosthenes_sieve(const unsigned long &range){
 
    // Mark all the even numbers as not prime and the odd ones as primes
    for (int i=2; i<range; i+=2){
-      mask[i] = true;
       mask[i+1] = false;
    }
 

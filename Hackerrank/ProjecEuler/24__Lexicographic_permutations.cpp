@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////////////////////////
-//  Project Euler #24: Lexicographic permutations                                                //
+//  Project Euler #24: Lexicographic permutations                                       //
 //                                                                                      //
 //  Link: https://www.hackerrank.com/contests/projecteuler/challenges/euler024/problem  //
 //  Difficulty: Easy                                                                    //
